@@ -33,7 +33,6 @@ jobs:
         with:
           PROJECT_FILE_PATH: Ealen.Dotnet.Templates.csproj
           PACKAGE_NAME: Ealen.Dotnet.Templates
-          VERSION_STATIC: ${GITHUB_REF#refs/*/}
           TAG_FORMAT: '*'
           NUGET_KEY: ${{ secrets.NUGET_API_KEY }}
           NUGET_SOURCE: https://api.nuget.org
