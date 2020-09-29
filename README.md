@@ -1,6 +1,6 @@
 # .NET Core Templates
 
-![GitHub stars](https://img.shields.io/github/stars/ealenn/Ealen.Dotnet.Templates?style=for-the-badge)
+![GitHub stars](https://img.shields.io/github/stars/ealenn/templates-dotnet?style=for-the-badge)
 ![Nuget](https://img.shields.io/nuget/dt/Ealen.Dotnet.Templates?style=for-the-badge)
 ![Nuget](https://img.shields.io/nuget/v/Ealen.Dotnet.Templates?style=for-the-badge)
 
