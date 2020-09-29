@@ -17,7 +17,9 @@ jobs:
           dotnet-version: 3.1
 
       - name: Version
-        run: sed -i 's/1.0/${GITHUB_REF#refs/*/}/g' Ealen.Dotnet.Templates.csproj
+        run: sed -i 's/1.0/'"$VERSION"'/g' Ealen.Dotnet.Templates.csproj
+        env:
+          VERSION: ${GITHUB_REF#refs/*/}
 
       - name: Install dependencies
         run: dotnet restore Ealen.Dotnet.Templates.csproj
