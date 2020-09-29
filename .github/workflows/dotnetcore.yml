@@ -34,8 +34,8 @@ jobs:
       with:
         dotnet-version: 3.1.x
     - name: Install dependencies
-      run: dotnet restore ${{ matrix.project }}.sln
+      run: dotnet restore ./templates/${{ matrix.project }}.sln
     - name: Build
-      run: dotnet build ${{ matrix.project }}.sln --configuration Release --no-restore
+      run: dotnet build ./templates/${{ matrix.project }}.sln --configuration Release --no-restore
     - name: Tests
-      run: dotnet test ${{ matrix.project }}.sln --configuration Release --no-restore --collect:"XPlat Code Coverage"
+      run: dotnet test ./templates/${{ matrix.project }}.sln --configuration Release --no-restore --collect:"XPlat Code Coverage"
