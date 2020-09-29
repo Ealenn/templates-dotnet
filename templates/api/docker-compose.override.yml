@@ -1,0 +1,24 @@
+version: '3.4'
+
+services:
+  api:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_URLS=https://+:443;http://+:80
+    ports:
+      - "80"
+      - "443"
+    volumes:
+      - ${APPDATA}/ASP.NET/Https:/root/.aspnet/https:ro
+
+  #------------------------------
+  # LOGGING
+  #------------------------------
+  seq:
+    image: datalust/seq:latest
+    ports:
+      - 8080:80
+      - 5341:5341
+    environment:
+      ACCEPT_EULA: Y
+    restart: unless-stopped

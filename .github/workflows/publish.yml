@@ -1,0 +1,40 @@
+name: Publish Nuget
+on:
+  push:
+    tags:
+      - '*'
+
+jobs:
+  publish:
+    name: build, pack & publish
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Setup dotnet
+        uses: actions/setup-dotnet@v1
+        with:
+          dotnet-version: 3.1
+
+      - name: Version
+        run: |
+          echo ::set-env name=VERSION::${GITHUB_REF#refs/*/}
+          sed -i 's/1.0/'"$VERSION"'/g' Ealen.Dotnet.Templates.csproj
+
+      - name: Install dependencies
+        run: dotnet restore Ealen.Dotnet.Templates.csproj
+
+      - name: Build
+        run: dotnet build Ealen.Dotnet.Templates.csproj --configuration Release --no-restore
+
+      - name: Publish
+        id: publish_nuget
+        uses: rohith/publish-nuget@v2
+        with:
+          PROJECT_FILE_PATH: Ealen.Dotnet.Templates.csproj
+          PACKAGE_NAME: Ealen.Dotnet.Templates
+          VERSION_STATIC: ${GITHUB_REF#refs/*/}
+          TAG_FORMAT: '*'
+          NUGET_KEY: ${{ secrets.NUGET_API_KEY }}
+          NUGET_SOURCE: https://api.nuget.org
+          INCLUDE_SYMBOLS: false

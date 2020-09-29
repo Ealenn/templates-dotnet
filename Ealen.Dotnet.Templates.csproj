@@ -6,7 +6,7 @@
     <Title>Ealen .NET Templates</Title>
     <Authors>Ealen</Authors>
     <Description>Template API</Description>
-    <PackageTags>dotnet;new;templates</PackageTags>
+    <PackageTags>dotnet;new;templates;API;REST;job;cli;console</PackageTags>
     <TargetFramework>netcoreapp3.1</TargetFramework>
 
     <IncludeContentInPack>true</IncludeContentInPack>
