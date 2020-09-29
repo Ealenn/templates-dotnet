@@ -7,8 +7,11 @@
 ## Install
 
 ### Install Templates
+
+- [nuget.org/packages/Ealen.Dotnet.Templates](https://www.nuget.org/packages/Ealen.Dotnet.Templates/)
+
 ```bash
-~$ dotnet new -i Ealen.Dotnet.Templates
+~$ dotnet new --install Ealen.Dotnet.Templates
 ```
 
 ```bash
