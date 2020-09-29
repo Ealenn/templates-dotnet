@@ -24,7 +24,8 @@ jobs:
     strategy:
       matrix:
         project: [
-          "api/Api.Dotnet.Template"
+          "api/Api.Dotnet.Template",
+          "console/Console.Dotnet.Template"
         ]
 
     steps:

@@ -2,6 +2,7 @@
 
 ![GitHub stars](https://img.shields.io/github/stars/ealenn/templates-dotnet?style=for-the-badge)
 ![Nuget](https://img.shields.io/nuget/dt/Ealen.Dotnet.Templates?style=for-the-badge)
+![Docker Pulls](https://img.shields.io/docker/pulls/ealen/dotnet-templates?style=for-the-badge)
 ![Nuget](https://img.shields.io/nuget/v/Ealen.Dotnet.Templates?style=for-the-badge)
 
 <!-- vscode-markdown-toc -->
