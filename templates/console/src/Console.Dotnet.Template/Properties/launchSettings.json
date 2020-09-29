@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "Console.Dotnet.Template": {
+      "commandName": "Project",
+      "commandLineArgs": "--help"
+    }
+  }
+}

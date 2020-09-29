@@ -1,0 +1,45 @@
+{
+    "$schema": "http://json.schemastore.org/template",
+    "name": "Ealen .NET Core Console",
+    "description": "Ealen Template Console with DevOps and Sample",
+    "author": "Ealen",
+    "shortName": "ealen-console",
+    "identity": "Console.Dotnet.Template",
+    "classifications": [
+        "Ealen",
+        "Common",
+        "Console"
+    ],
+	"tags": {
+		"language": "C#",
+		"type":"project"
+	},
+    "preferNameDirectory": true,
+    "symbols": {
+        "namespace": {
+            "type": "parameter",
+            "isRequired": true,
+            "replaces": "Dotnet.Template",
+            "fileRename": "Dotnet.Template",
+            "folderRename": "Dotnet.Template",
+            "dataType": ["string", "file", "folder"]
+        },
+        "repository": {
+            "type": "parameter",
+            "isRequired": true,
+            "replaces": "GH-USER/GH-REPOSITORY",
+            "dataType": ["string"]
+        }
+    },
+    "postActions": [{
+        "description": "Restore NuGet packages",
+        "manualInstructions": [
+          { "text": "Run 'dotnet restore'" }
+        ],
+        "actionId": "210D431B-A78B-4D2F-B762-4ED3E3EA9025",
+        "continueOnError": true
+      }],
+    "primaryOutputs": [
+        { "path": "Console.Dotnet.Template.sln" }
+    ]
+}

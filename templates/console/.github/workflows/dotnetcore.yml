@@ -1,0 +1,34 @@
+name: .NET Core
+on:
+  pull_request:
+    branches:
+      - master
+      - develop
+  push:
+    branches:
+      - master
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Setup .NET Core
+      uses: actions/setup-dotnet@v1
+      with:
+        dotnet-version: 3.1.x
+
+    - name: Install dependencies
+      run: dotnet restore Console.Dotnet.Template.sln
+
+    - name: Build
+      run: dotnet build Console.Dotnet.Template.sln --configuration Release --no-restore
+
+    - name: Test
+      run: dotnet test Console.Dotnet.Template.sln --no-restore --verbosity normal --collect:"XPlat Code Coverage"
+
+    - name: Publish Code Coverage
+      run: bash <(curl -s https://codecov.io/bash)
+      env:
+        CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
