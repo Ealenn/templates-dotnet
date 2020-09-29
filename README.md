@@ -31,7 +31,7 @@
 Templates                          Short Name          Language          Tags
 -----------------------------------------------------------------------------------------------
 Ealen .NET Core API                ealen-api           [C#]              Ealen/Common/Api
-...
+Ealen .NET Core Console            ealen-console       [C#]              Ealen/Common/Console
 ```
 
 | Parameters | Type                      | Example                     |
