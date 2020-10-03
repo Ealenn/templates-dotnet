@@ -7,6 +7,8 @@
 
 <!-- vscode-markdown-toc -->
 * [Available Templates](#AvailableTemplates)
+	* [Projects](#Projects)
+	* [Parameters](#Parameters)
 * [Generate Template](#GenerateTemplate)
 	* [.NET CLI](#NETCLI)
 	* [Docker](#Docker)
@@ -31,8 +33,19 @@
 Templates                          Short Name          Language          Tags
 -----------------------------------------------------------------------------------------------
 Ealen .NET Core API                ealen-api           [C#]              Ealen/Common/Api
+Ealen .NET Core API CQRS/ES        ealen-api-cqrs      [C#]              Ealen/Common/Api
 Ealen .NET Core Console            ealen-console       [C#]              Ealen/Common/Console
 ```
+
+### <a name='Projects'></a>Projects
+
+| Name             | Description               | Compose |
+| ---------------- | ------------------------- | ------- |
+| ealen-api        | REST API with Docker, Swagger, Redoc, Serilog, Seq, Prometheus | Seq |
+| ealen-api-cqrs   | REST API based on EventFlow with Docker, Swagger, Redoc, Serilog, Seq, Prometheus | mongo, mongo-express, postgres |
+| ealen-console    | Console App Cross-Platform based on Cocona |  |
+
+### <a name='Parameters'></a>Parameters
 
 | Parameters | Type                      | Example                     |
 | ---------- | ------------------------- | --------------------------- |
