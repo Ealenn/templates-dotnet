@@ -3,12 +3,15 @@
     <PackageType>Template</PackageType>
     <PackageVersion>1.0</PackageVersion>
     <PackageId>Ealen.Dotnet.Templates</PackageId>
+
     <Title>Ealen .NET Templates</Title>
     <Authors>Ealen</Authors>
-    <Description>Template API</Description>
+    <Description>.NET Templates with GitHub Actions, Docker and more</Description>
     <PackageTags>dotnet;new;templates;API;REST;job;cli;console</PackageTags>
-    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <PackageProjectUrl>https://github.com/Ealenn/templates-dotnet</PackageProjectUrl>
+    <PackageLicenseExpression>GPL-3.0</PackageLicenseExpression>
 
+    <TargetFramework>netcoreapp3.1</TargetFramework>
     <IncludeContentInPack>true</IncludeContentInPack>
     <IncludeBuildOutput>false</IncludeBuildOutput>
     <ContentTargetFolders>content</ContentTargetFolders>
