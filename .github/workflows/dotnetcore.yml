@@ -25,7 +25,7 @@ jobs:
       matrix:
         project: [
           "api/Api.Dotnet.Template",
-          "api-cqrs/Dotnet.Cqrs.sln",
+          "api-cqrs/Dotnet.Cqrs",
           "console/Console.Dotnet.Template"
         ]
 
